@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calendário TOP</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="shortcut icon"
+        href="css/calendar.svg"
+        rel="icon" type="image/x-icon">
+</head>
+<body>
+    <h1 class="menu"><p>Unemat</p>
+        <nav>
+            <a href="info.html">Info</a>
+            <a href="" style="color: #bdecb6bf;" >Home</a>
+            <a href="gerenciar.html" >Gerenciar</a>
+        </nav>
+    </h1>
+    <main>
+        <form id="form">
+            <h2>Adicione a data do seu evento:</h2>
+            <input type="date" id="diaCompr" placeholder="Dia do compromisso" required>
+            <input type="text" id="horaCompr" placeholder="00:00" required maxlength="5" oninput="mascaraHora(this)">
+            <input type="text" id="assuntCompr" placeholder="Assunto" required>
+            <button type="submit">Salvar</button>
+        </form>
+        <table style="display: none;">
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Hora</th>
+                    <th>Assunto</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+    </main>
+    <footer>
+        Página dedicada aos pequenos estudantes:
+        Anna Carolina, Antonio Junior, Endrew Gabriel e João Antônio
+    </footer>
+    <script src="scriptofc.js"></script>
+</body>
+</html>

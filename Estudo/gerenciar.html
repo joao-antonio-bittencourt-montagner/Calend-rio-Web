@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calendário TOP</title>
+    <link rel="shortcut icon"
+        href="css/calendar.svg"
+        rel="icon" type="image/x-icon">
+</head>
+<body>
+    <h1 class="menu"><p>Unemat</p>
+        <nav>
+            <a href="info.html">Info</a>
+            <a href="home.html" >Home</a>
+            <a href="" style="color: #bdecb6bf;">Gerenciar</a>
+        </nav>
+    </h1>
+    <h2>Seus dados</h2>
+    <main>
+        <form id="form">
+            <h2>Adicione a data do seu evento:</h2>
+            <input type="date" id="diaCompr" placeholder="Dia do compromisso" required>
+            <input type="text" id="horaCompr" placeholder="00:00" required maxlength="5" oninput="mascaraHora(this)">
+            <input type="text" id="assuntCompr" placeholder="Assunto" required>
+            <button type="submit">Salvar</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <td>Dia</td>
+                    <td>Hora</td>
+                    <td>Nome do Evento</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
+
+            </tbody>
+        </table>
+        <button class="print" onclick="window.print()">Imprimir</button>
+    </main>
+    <footer>
+        Página dedicada aos pequenos estudantes:
+        Anna Carolina, Antonio Junior, Endrew Gabriel e
+        João Antônio
+    </footer>
+    <script src="scriptofc.js"></script>
+    <script src="https://idw2024-3e5f8-default-rtdb.firebaseio.com/evento.json"></script>
+</body>
+</html>
